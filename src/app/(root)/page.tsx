@@ -2,17 +2,25 @@ import { BsArrowRight } from "react-icons/bs";
 import { MdElectricBolt } from "react-icons/md";
 import { BiShield, BiDollar, BiLeaf } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
-export default function Home() {
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+
+const delay = (ms)=>new Promise((resolve)=>setTimeout(resolve,ms))
+export default async function Home() {
+  await delay(5000)
   return (
     <div className="flex flex-col bg-red-400 dark:bg-amber-500">
+
       <main className="flex-1">
         <div className="min-h-screen">
           <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
             <div className="absolute inset-0 opacity-20">
-              <img
-                src="https://images.unsplash.com/photo-1635424709845-3a85ad5e1f5e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHBhbmVscyUyMHJvb2Z0b3AlMjBpbnN0YWxsYXRpb258ZW58MXx8fHwxNzU1NjE1MjE3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080&amp;utm_source=figma&amp;utm_medium=referral"
-                alt="Solar panels installation"
-                className="w-full h-full object-cover"
+              <Image
+                src="/solar/roof.jpeg"
+                alt="Solar panels"
+                width={1200}
+                height={600}
+
               />
             </div>
             <div className="container mx-auto px-4 relative z-10">
@@ -22,7 +30,7 @@ export default function Home() {
                   <span className="text-yellow-400">Solar Energy</span>
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
-                  Join thousands of homeowners who've made the switch to clean,
+                  Join thousands of homeowners who have made the switch to clean,
                   renewable solar energy. Save money, increase your home value,
                   and help protect the environment.
                 </p>
@@ -34,12 +42,8 @@ export default function Home() {
                     Get Free Quote
                     <BsArrowRight className="text-xl" />
                   </button>
-                  <button
-                    data-slot="button"
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([className*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[&gt;svg]:px-4 border-white text-white hover:bg-white hover:text-blue-800"
-                  >
-                    Learn More
-                  </button>
+                  <Button  >Learn more</Button>
+
                 </div>
               </div>
             </div>
@@ -276,10 +280,7 @@ export default function Home() {
                   data-slot="button"
                   className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([className*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3"
                 >
-                  View All Testimonials{" "}
-                                      <BsArrowRight className="text-xl" />
-
-
+                  View All Testimonials <BsArrowRight className="text-xl" />
                 </button>
               </div>
             </div>

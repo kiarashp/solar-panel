@@ -1,11 +1,19 @@
-"use client";
-
 import "./globals.css";
-import SimpleHeader from "@/components/SimpleHeader";
-import SimpleFooter from "@/components/SimpleFooter";
-
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import type { Metadata } from "next";
+import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from "@/lib/constants";
 
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: {
+    template: `%s | ${APP_NAME}`,
+    default: `${APP_NAME}`,
+  },
+  description: `${APP_DESCRIPTION}`,
+  metadataBase: new URL(SERVER_URL),
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -13,14 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col mx-auto max-w-7xl text-purple-300 dark:text-green-800">
-            <SimpleHeader />
-            {children}
-            <SimpleFooter />
-          </div>
+      <body
+        className={`${inter.className} antialiased`}
+        suppressHydrationWarning
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
         </ThemeProvider>
       </body>
     </html>
