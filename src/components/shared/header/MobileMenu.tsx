@@ -12,8 +12,10 @@ import { MenuIcon } from "lucide-react";
 import { MenuTxt } from "./MenuTxt";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 const MobileMenu = () => {
+  const locale = useLocale();
   return (
     <nav className="block lg:hidden  ">
       <Sheet>
@@ -24,12 +26,12 @@ const MobileMenu = () => {
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
             {MenuTxt.map((menu) => (
-              <Button key={menu.label} asChild variant="ghost">
+              <Button key={menu.labelEn} asChild variant="ghost">
                 <Link
                   href={menu.link}
                   className={"transition-colors  font-medium"}
                 >
-                  {menu.label}
+                   {locale === 'en' ? menu.labelEn : menu.labelFa}
                 </Link>
               </Button>
             ))}

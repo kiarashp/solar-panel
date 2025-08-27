@@ -24,7 +24,7 @@ const LocaleSwitcher = () => {
       <SelectTrigger variant="primary">
         <SelectValue placeholder="Theme" />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent position="popper" side="bottom">
         <SelectItem value="en">En</SelectItem>
         <SelectItem value="fa">فارسی</SelectItem>
       </SelectContent>
