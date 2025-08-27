@@ -1,7 +1,7 @@
-const delay = (ms)=>new Promise((resolve)=>setTimeout(resolve,ms))
+// const delay = (ms)=>new Promise((resolve)=>setTimeout(resolve,ms))
 
 export default async function About(){
-      await delay(5000)
+    //   await delay(5000)
 
     return(
         <div className="min-h-screen p-6">

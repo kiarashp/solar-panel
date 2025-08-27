@@ -23,7 +23,6 @@ const MobileMenu = () => {
         <SheetContent className="flex flex-col bg-gray-100 dark:bg-primary-950">
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
-            <ThemeToggle />
             {MenuTxt.map((menu) => (
               <Button key={menu.label} asChild variant="ghost">
                 <Link
@@ -34,6 +33,8 @@ const MobileMenu = () => {
                 </Link>
               </Button>
             ))}
+                        <ThemeToggle />
+
             <SheetDescription></SheetDescription>
           </SheetHeader>
         </SheetContent>

@@ -26,41 +26,46 @@ export function ThemeToggle() {
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="ring-0 focus-visible:ring-0">
-          {theme === "system" ? (
-            <SunMoon />
-          ) : theme === "dark" ? (
-            <MoonIcon />
-          ) : (
-            <SunIcon />
-          )}
-          {theme}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-white dark:bg-primary-950 shadow-sm p-3">
-        <DropdownMenuLabel className="font-semibold">Appearance</DropdownMenuLabel>
-        <DropdownMenuSeparator className="text-gray-300 bg-accent-100 " />
-        <DropdownMenuCheckboxItem className="cursor-pointer outline-0 "
-          checked={theme === "system"}
-          onClick={() => setTheme("system")}
-        >
-          system
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem className="cursor-pointer outline-0"
-          checked={theme === "light"}
-          onClick={() => setTheme("light")}
-        >
-          light
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem className="cursor-pointer outline-0"
-          checked={theme === "dark"}
-          onClick={() => setTheme("dark")}
-        >
-          dark
-        </DropdownMenuCheckboxItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="ring-0 focus-visible:ring-0">
+            {theme === "system" ? (
+              <SunMoon />
+            ) : theme === "dark" ? (
+              <MoonIcon />
+            ) : (
+              <SunIcon />
+            )}
+            {theme}
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="bg-white dark:bg-primary-950 shadow-sm p-3 space-y-2">
+          <DropdownMenuLabel className="font-semibold">
+            Appearance
+          </DropdownMenuLabel>
+          <DropdownMenuSeparator className="bg-gray-700 dark:bg-accent-100  h-0.5 my-1 " />
+          <DropdownMenuCheckboxItem
+            className="cursor-pointer outline-0 hover:bg-primary-100 dark:hover:bg-primary-900 rounded-sm  px-2"
+            checked={theme === "system"}
+            onClick={() => setTheme("system")}
+          >
+            system
+          </DropdownMenuCheckboxItem>
+          <DropdownMenuCheckboxItem
+            className="cursor-pointer outline-0 hover:bg-primary-100 dark:hover:bg-primary-900 rounded-sm px-2"
+            checked={theme === "light"}
+            onClick={() => setTheme("light")}
+          >
+            light
+          </DropdownMenuCheckboxItem>
+          <DropdownMenuCheckboxItem
+            className="cursor-pointer outline-0 hover:bg-primary-100 dark:hover:bg-primary-900 rounded-sm px-2"
+            checked={theme === "dark"}
+            onClick={() => setTheme("dark")}
+          >
+            dark
+          </DropdownMenuCheckboxItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+  )
 }
