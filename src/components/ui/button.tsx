@@ -59,6 +59,18 @@ const buttonVariants = cva(
           hover:underline active:text-primary-700
           dark:text-primary-400 dark:hover:underline dark:active:text-primary-600
         `,
+        orange: `
+          bg-orange-500 text-white shadow-xs
+          hover:bg-orange-600 active:bg-orange-700
+          dark:bg-orange-400 dark:text-black
+          dark:hover:bg-orange-500 dark:active:bg-orange-600
+        `,
+        yellow: `
+          bg-yellow-400 text-black shadow-xs
+          hover:bg-yellow-500 active:bg-yellow-600
+          dark:bg-yellow-300 dark:text-black
+          dark:hover:bg-yellow-400 dark:active:bg-yellow-500
+        `,
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -80,9 +92,20 @@ interface ButtonProps
   asChild?: boolean;
 }
 
-const Button = ({ className, variant, size, asChild = false, ...props }: ButtonProps) => {
+const Button = ({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: ButtonProps) => {
   const Comp = asChild ? Slot : "button";
-  return <Comp className={cn(buttonVariants({ variant, size, className }))} {...props} />;
+  return (
+    <Comp
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  );
 };
 
 export { Button, buttonVariants };

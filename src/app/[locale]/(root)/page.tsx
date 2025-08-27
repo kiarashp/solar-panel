@@ -4,10 +4,22 @@ import { BiShield, BiDollar, BiLeaf } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
+import { useTranslations } from "next-intl";
 
-export default async function Home() {
+export default function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
+  const t = useTranslations("home");
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <section
         className="relative bg-gradient-to-r from-primary-600 to-primary-800
            text-white py-20 overflow-hidden "
@@ -16,31 +28,32 @@ export default async function Home() {
           <Image
             src="/solar/roof.jpeg"
             alt="Solar panels"
-            height={600}
-            width={1800}
+            fill
             priority
+            className="object-cover"
           />
         </div>
         <div className="container mx-auto relative z-10 flex flex-col xpad">
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            Power Your Future with
+            {t("s1-title")}
           </h1>
-          <h1 className="text-yellow-400 text-5xl lg:text-6xl font-bold mb-8">Solar Energy</h1>
+          <h1 className="text-yellow-400 text-5xl lg:text-6xl font-bold mb-8">
+            {t("s1-subtitle")}
+          </h1>
 
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl">
-            Join thousands of homeowners who have made the switch to clean,
-            renewable solar energy. Save money, increase your home value, and
-            help protect the environment.
-          </p>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl">{t("s1-desc")}</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              data-slot="button"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([className*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 rounded-md px-6 has-[&gt;svg]:px-4 bg-yellow-500 hover:bg-yellow-600 text-black"
+            <Button
+              variant="yellow"
+              className={`flex items-center gap-2 ${
+                locale === "fa" ? "flex-row-reverse" : ""
+              }`}
             >
-              Get Free Quote
-              <BsArrowRight className="text-xl" />
-            </button>
-            <Button>Learn more</Button>
+              {t("s1-button2")}
+              <BsArrowRight  className="text-xl" />
+            </Button>
+
+            <Button>{t("s1-button1")}</Button>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MenuTxt } from "./MenuTxt";
 import Link from "next/link";
 import { ThemeToggle } from "../ThemeToggle";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 const DesktopMenu = () => {
   return (
@@ -15,7 +16,8 @@ const DesktopMenu = () => {
           </Button>
         ))}
       </div>
-      <div className="relative z-50 hidden lg:block">
+      <div className="relative z-50 hidden lg:flex gap-2">
+        <LocaleSwitcher />
         <ThemeToggle />
       </div>
     </>
