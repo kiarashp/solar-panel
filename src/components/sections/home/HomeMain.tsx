@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 import Image from "next/image";
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
@@ -29,15 +30,18 @@ const HomeMain = () => {
         </h1>
 
         <p className="text-xl mb-8 text-blue-100 max-w-2xl">{t("s1-desc")}</p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button
-            variant="yellow"
-            className={`flex items-center gap-2 ${
-              locale === "fa" ? "flex-row-reverse" : ""
-            }`}
-          >
+        <div
+          className={`flex flex-col sm:flex-row gap-4 ${
+            locale === "fa" ? "sm:flex-row-reverse justify-end" : ""
+          }`}
+        >
+          <Button variant="yellow" className="flex items-center gap-2">
             {t("s1-button2")}
-            <BsArrowRight className="text-xl" />
+            {locale === "fa" ? (
+              <BsArrowLeft className="text-xl" />
+            ) : (
+              <BsArrowRight className="text-xl" />
+            )}
           </Button>
 
           <Button>{t("s1-button1")}</Button>
