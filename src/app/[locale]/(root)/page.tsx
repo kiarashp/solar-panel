@@ -2,11 +2,10 @@ import { BsArrowRight } from "react-icons/bs";
 import { MdElectricBolt } from "react-icons/md";
 import { BiShield, BiDollar, BiLeaf } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { useTranslations } from "next-intl";
+import HomeMain from "@/components/sections/home/HomeMain";
 
 export default function Home({
   params,
@@ -20,43 +19,7 @@ export default function Home({
 
   return (
     <div className="flex flex-col ">
-      <section
-        className="relative bg-gradient-to-r from-primary-600 to-primary-800
-           text-white py-20 overflow-hidden "
-      >
-        <div className="absolute inset-0 flex items-center justify-center opacity-20">
-          <Image
-            src="/solar/roof.jpeg"
-            alt="Solar panels"
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
-        <div className="container mx-auto relative z-10 flex flex-col xpad">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            {t("s1-title")}
-          </h1>
-          <h1 className="text-yellow-400 text-5xl lg:text-6xl font-bold mb-8">
-            {t("s1-subtitle")}
-          </h1>
-
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl">{t("s1-desc")}</p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              variant="yellow"
-              className={`flex items-center gap-2 ${
-                locale === "fa" ? "flex-row-reverse" : ""
-              }`}
-            >
-              {t("s1-button2")}
-              <BsArrowRight  className="text-xl" />
-            </Button>
-
-            <Button>{t("s1-button1")}</Button>
-          </div>
-        </div>
-      </section>
+      <HomeMain />
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
