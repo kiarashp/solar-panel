@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";

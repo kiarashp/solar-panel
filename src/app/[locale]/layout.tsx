@@ -1,5 +1,6 @@
 import "@/app/globals.css";
-import { Inter } from "next/font/google";
+import { Inter,Vazirmatn } from "next/font/google";
+
 import { ThemeProvider } from "next-themes";
 import type { Metadata } from "next";
 import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from "@/lib/constants";
@@ -9,7 +10,17 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter"
+});
+
+const vazirmatn = Vazirmatn({ 
+  subsets: ["arabic", "latin"],
+  variable: "--font-vazirmatn"
+});
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +52,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'}  suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased`}
+        className={`${locale === 'fa' ? 'font-vazirmatn' : 'font-inter'} antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider
