@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "Ready to make the switch to solar? Get a free consultation and personalized quote. Our experts are here to answer your questions and help you save money with solar energy."
+  },
+  "getInTouch": {
+    "title": "Get In Touch",
+    "subtitle": "Multiple ways to reach our solar experts",
+    "card-title-1": "Phone",
+    "card-subtitle-1": "(555) 123-4567",
+    "card-desc-1": "Toll Free: (800) 123-SOLAR",
+    "card-title-2": "Email",
+    "card-subtitle-2": "info@solarpro.com",
+    "card-desc-2": "support@solarpro.com",
+    "card-title-3": "Address",
+    "card-subtitle-3": "123 Solar Street",
+    "card-desc-3": "Green City, GC 12345",
+    "card-title-4": "Business Hours",
+    "card-subtitle-4": "Mon-Fri: 8:00 AM - 6:00 PM",
+    "card-desc-4": "Sat: 9:00 AM - 4:00 PM"
+  },
+  "formLocation": {
+    "request": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAdress": "Email Adress",
+      "phoneNumber": "Phone Number",
+      "propertyAdress": "Property Adress",
+      "serviceType": "Service Type",
+      "additionalInfo": "Additional Information",
+      "submitButton": "Get My Free Quote"
+    },
+    "area": {
+      "title": "Our Service Areas",
+      "interactiveMap": "Interactive Map",
+      "servingCountry": "Serving the Southwest United States",
+      "secondTitle": "Cities We Serve",
+      "section1": "Austin, TX",
+      "section2": "San Diego, CA",
+      "section3": "Las Vegas, NV",
+      "section4": "Albuquerque, NM",
+      "section5": "Phoenix, AZ",
+      "section6": "Denver, CO",
+      "section7": "Portland, OR",
+      "section8": "Salt Lake City, UT",
+      "caption": "Don't see your city listed? Contact us - we're expanding our service areas regularly!",
+      "emergenyTitle": "Emergency Support",
+      "emergencySubtitle": "Need urgent solar system support? Our emergency hotline is available 24/7 for existing customers.",
+      "emergencyButton": "Emergency Hotline"
+    }
+  },
+  "common": {
+    "title": "Common Questions",
+    "subtitle": "Quick answers to frequently asked questions",
+    "q1": "How long does installation take?",
+    "a1": "Most residential installations take 1-3 days to complete.",
+    "q2": "What warranties do you offer?",
+    "a2": "25-year panel warranty, 10-year inverter warranty, and workmanship guarantee.",
+    "q3": "How much can I save?",
+    "a3": "Most customers save 50-90% on their electricity bills."
+  }
+}

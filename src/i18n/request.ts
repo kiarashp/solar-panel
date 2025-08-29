@@ -7,7 +7,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const locale = requested ?? 'en';                 // your fallback
 
   // list the namespaces you maintain for each locale
-  const namespaces = ['home', 'about','common'];  
+  const namespaces = ['home', 'contact','common','products'];  
 
   const messages: Record<string, any> = {};
 
