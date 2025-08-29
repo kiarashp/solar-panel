@@ -7,7 +7,7 @@ const HomeHowItWorks = () => {
   const t = useTranslations("home");
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto xpad">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             {t("s3-title")}
@@ -29,7 +29,8 @@ const HomeHowItWorks = () => {
             return (
               <div key={i} className="text-center">
                 <div
-                  className={`${colorsclasses[i].firstElClass} rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4`}
+                  className={`${colorsclasses[i].firstElClass} rounded-full w-16 h-16 flex items-center
+                     justify-center mx-auto mb-4`}
                 >
                   <span
                     className={`text-2xl font-bold ${colorsclasses[i].secondElClass} `}

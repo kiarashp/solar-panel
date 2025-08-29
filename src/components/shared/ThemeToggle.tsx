@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Select,
   SelectTrigger,
@@ -15,6 +16,9 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+
+  const t = useTranslations("common");
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -22,7 +26,7 @@ export function ThemeToggle() {
   if (!mounted) return null;
 
   return (
-    <Select value={theme} onValueChange={(value) => setTheme(value)}>
+    <Select  value={theme} onValueChange={(value) => setTheme(value)}>
       <SelectTrigger variant="primary">
         {theme === "system" ? (
           <SunMoon />
@@ -34,10 +38,10 @@ export function ThemeToggle() {
         <SelectValue placeholder="Theme" />
       </SelectTrigger>
 
-      <SelectContent position="popper" side="bottom">
-        <SelectItem value="system">System</SelectItem>
-        <SelectItem value="light">Light</SelectItem>
-        <SelectItem value="dark">Dark</SelectItem>
+      <SelectContent  position="popper" side="bottom">
+        <SelectItem  value="system">{t('themeToggle-system')}</SelectItem>
+        <SelectItem value="light">{t('themeToggle-light')}</SelectItem>
+        <SelectItem value="dark">{t('themeToggle-dark')}</SelectItem>
       </SelectContent>
     </Select>
   );

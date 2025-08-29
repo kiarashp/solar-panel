@@ -48,7 +48,7 @@ export function SelectTrigger({
       data-size={size}
       data-variant={variant}
       className={cn(
-        "flex w-fit cursor-pointer items-center justify-between gap-2 rounded-md border px-3 py-2 text-sm outline-none shadow-sm transition-colors",
+        "flex w-fit text-nowrap cursor-pointer items-center justify-between gap-2 rounded-md border px-3 py-2 text-sm outline-none shadow-sm transition-colors",
         "disabled:cursor-not-allowed disabled:opacity-50",
         "data-[size=default]:h-9 data-[size=sm]:h-8",
 
@@ -125,7 +125,7 @@ export function SelectItem({
       data-variant={variant}
       className={cn(
         "cursor-pointer relative flex w-full  select-none items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-hidden",
-        "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+        "data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-nowrap",
 
         // 🌈 ITEM COLORS
         variant === "primary" &&

@@ -7,7 +7,7 @@ const HomeReadyToGoSolar = () => {
   const t = useTranslations("home");
 
   return (
-    <section className="py-16 bg-blue-600 text-white">
+    <section className="py-16 bg-primary-600 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-4">{t("s5-title")}</h2>
         <p className="text-xl mb-8 text-blue-100">{t("s5-subTitle")}</p>

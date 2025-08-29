@@ -1,0 +1,41 @@
+{
+  "header-logo-name": "SolarPro",
+  "header-topBar-slogan": "Free Solar Consultation Available",
+  "header-topBar-phone": "(555) 123-4567",
+  "header-responsive-title": "Menu",
+  "themeToggle-system": "System",
+  "themeToggle-light": "Light",
+  "themeToggle-dark": "Dark",
+  "footer-logo-name": "SolarPro",
+  "footer-desc": "Leading provider of sustainable solar energy solutions for residential and commercial properties.",
+  "footer-col1-title": "Quick Links",
+  "footer-prod1": "Residential Solar",
+  "footer-prod2": "Commercial Solar",
+  "footer-prod3": "Solar Financing",
+  "footer-prod4": "Maintenance",
+  "footer-prod5": "Battery Storage",
+  "footer-col2-title": "Products",
+  "footer-quickLink1": "Home",
+  "footer-quickLink2": "Contact Us",
+  "footer-quickLink3": "Services",
+  "footer-quickLink4": "Products",
+  "footer-quickLink5": "Portfolio",
+  "footer-col3-title": "Contact Info",
+  "footer-phone": "(555) 123-4567",
+  "footer-address": " 123 Solar Street, Green City, GC 12345",
+  "footer-copyright": "© 2025 SolarPro. All rights reserved.",
+  "items": [
+      {
+        "title": "Years of service",
+        "value": "34"
+      },
+      {
+        "title": "Happy clients", 
+        "value": "1.000+"
+      },
+      {
+        "title": "Products",
+        "value": "5.000+"
+      }
+    ]
+}

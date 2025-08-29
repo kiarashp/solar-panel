@@ -13,9 +13,12 @@ import { MenuTxt } from "./MenuTxt";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 const MobileMenu = () => {
   const locale = useLocale();
+    const t = useTranslations("common");
+
   return (
     <nav className="block lg:hidden  ">
       <Sheet>
@@ -24,7 +27,7 @@ const MobileMenu = () => {
         </SheetTrigger>
         <SheetContent className="flex flex-col bg-gray-100 dark:bg-primary-950">
           <SheetHeader>
-            <SheetTitle>Menu</SheetTitle>
+            <SheetTitle>{t("header-responsive-title")}</SheetTitle>
             {MenuTxt.map((menu) => (
               <Button key={menu.labelEn} asChild variant="ghost">
                 <Link

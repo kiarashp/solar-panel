@@ -1,0 +1,41 @@
+{
+  "header-logo-name": "انرژی خورشیدی",
+  "header-topBar-slogan": "مشاوره رایگان از ما بگیرید",
+  "header-topBar-phone": "(555) 123-4567",
+  "header-responsive-title": "منو",
+  "themeToggle-system": "تنظیمات سیستم",
+  "themeToggle-light": "تم روشن",
+  "themeToggle-dark": "تم تاریک",
+  "footer-logo-name": "انرژی خورشیدی",
+  "footer-desc": "ارائه دهنده پیشرو راه حل های انرژی خورشیدی پایدار برای املاک مسکونی و تجاری.",
+  "footer-col1-title": "لینک‌های سریع",
+  "footer-prod1": "خورشیدی مسکونی",
+  "footer-prod2": "خورشیدی تجاری",
+  "footer-prod3": "تامین مالی خورشیدی",
+  "footer-prod4": "نگهداری",
+  "footer-prod5": "ذخیره سازی باتری",
+  "footer-col2-title": "محصولات",
+  "footer-quickLink1": "خانه",
+  "footer-quickLink2": "ارتباط با ما",
+  "footer-quickLink3": "خدمات",
+  "footer-quickLink4": "محصولات",
+  "footer-quickLink5": "نمونه کارها",
+  "footer-col3-title": "اطلاعات تماس",
+  "footer-phone": "(555) 123-4567",
+  "footer-address": "خیابان خورشید ۱۲۳، شهر سبز، GC ۱۲۳۴۵",
+  "footer-copyright": "© ۲۰۲۵ SolarPro. کلیه حقوق محفوظ است.",
+  "items": [
+      {
+        "title": "Years of service",
+        "value": "34"
+      },
+      {
+        "title": "Happy clients", 
+        "value": "1.000+"
+      },
+      {
+        "title": "Products",
+        "value": "5.000+"
+      }
+    ]
+}
